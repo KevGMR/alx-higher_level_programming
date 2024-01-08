@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+# 0_add.py
+# Brennan D Baraban <375@holbertonschool.com>
 
 if __name__ == "__main__":
     """Print the sum of 1 and 2."""
@@ -6,5 +8,4 @@ if __name__ == "__main__":
 
     a = 1
     b = 2
-    c=a+b
-    print(f"{a} + {b} = {c}")
+    print(f"{a} + {b} = {add(a, b)}")
