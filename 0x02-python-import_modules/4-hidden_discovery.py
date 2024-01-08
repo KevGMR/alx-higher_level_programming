@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-# 4-hidden_discovery.py
-# Brennan D Baraban <375@holbertonschool.com>
 
+# Import hidden_4
+import hidden_4
+
+# This code should not run when this file is imported
 if __name__ == "__main__":
-    """Print all names defined by hidden_4 module."""
-    import hidden_4
 
-    names = dir(hidden_4)
-    for name in names:
-        if name[:2] != "__":
-            print(name)
+    # Iterate through list of defined names in module
+    for def_name in dir(hidden_4):
+        if def_name[:2] != "__":
+            print(def_name)
