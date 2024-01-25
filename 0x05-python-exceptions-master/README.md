@@ -1,2 +1,1 @@
-# 0x05-python-exceptions
-BY KEV
+0x05. Python - Exception README     
