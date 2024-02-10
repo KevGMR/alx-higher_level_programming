@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""add all the attr"""
+"""
+adds an object
+"""
 
 
 def add_attribute(obj, name, value):
-    """assign dem attr"""
-    if hasattr(obj, '__dict__') or name in getattr(obj, '__slots__', {}):
-        setattr(obj, name, value)
-    else:
+    """
+        adds a new attribute to object
+    """
+    if not hasattr(obj, "__dict__"):
         raise TypeError("can't add new attribute")
+    setattr(obj, name, value)
