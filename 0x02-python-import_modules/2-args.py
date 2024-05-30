@@ -12,4 +12,4 @@ if __name__ == "__main__":
     if (argvLength > 2):
         print("{:d} arguments:".format(argvLength - 1))
     for i in range(argvLength):
-        print("{:d}: {:s}".format(i, argv[i]))
+        print("{:d}: {:s}".format(i+1, argv[i]))
