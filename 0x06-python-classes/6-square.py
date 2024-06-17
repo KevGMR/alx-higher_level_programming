@@ -5,8 +5,12 @@
 class Square:
     """Defines instance of class"""
     def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+        if not isinstance(size, int):
+            raise TypeError("size must be an integer")
+        if size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
