@@ -40,7 +40,6 @@ class Square:
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of two positive integers")
-
         self.__position = value
 
     def area(self):
@@ -51,6 +50,10 @@ class Square:
         """Prints the square"""
         if self.__size == 0:
             print()
-        else:
-            for _ in range(self.__size):
-                print("#" * self.__size)
+            return
+
+        [print("") for _ in range(0, self.__position[1])]
+        for _ in range(0, self.__size):
+            [print(" ", end="") for _ in range(0, self.__position[0])]
+            [print("#", end="") for _ in range(0, self.__size)]
+            print("")
