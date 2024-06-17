@@ -5,23 +5,13 @@
 class Square:
     """Defines instance of class"""
     def __init__(self, size=0, position=(0, 0)):
-        if isinstance(size, int) is not True:
-            raise TypeError("size must be an integer")
-        if size < 0:
-            raise ValueError("size must be >= 0")
-
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
         """Getter to retrieve size of square"""
         return self.__size
-
-    @property
-    def position(self):
-        """Getter to retrieve position"""
-        return self.__position
 
     @size.setter
     def size(self, value):
@@ -32,6 +22,11 @@ class Square:
             raise ValueError("size must be >= 0")
 
         self.__size = value
+
+    @property
+    def position(self):
+        """Getter to retrieve position"""
+        return self.__position
 
     @position.setter
     def position(self, value):
@@ -52,7 +47,9 @@ class Square:
         if self.__size == 0:
             print("")
         else:
-            for _ in range(self.__size):
+            for _ in range(0, self.__position[1]):
+                print("")
+            for _ in range(0, self.__size):
                 print(" " * self.__position[0], end="")
                 print("#" * self.__size, end="")
                 print("")
