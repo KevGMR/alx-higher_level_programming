@@ -7,4 +7,16 @@ How to use (case 1):
 
 How to use (case 2):
     >>> say_my_name("Bob")
-    Bob
+    Bob 
+
+Errors checking:
+
+Case 1 (not string):
+    >>> say_my_name(12, "White")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Case 2 (empty):
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
