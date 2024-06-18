@@ -3,11 +3,11 @@ Import the module
 
 How to use (case 1):
     >>> say_my_name("John", "Smith")
-    John Smith
+    My name is John Smith
 
 How to use (case 2):
     >>> say_my_name("Bob")
-    Bob 
+    My name is Bob 
 
 Errors checking:
 
