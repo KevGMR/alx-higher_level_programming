@@ -1,0 +1,10 @@
+Import the module
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+How to use (case 1):
+    >>> say_my_name("John", "Smith")
+    John Smith
+
+How to use (case 2):
+    >>> say_my_name("Bob")
+    Bob
