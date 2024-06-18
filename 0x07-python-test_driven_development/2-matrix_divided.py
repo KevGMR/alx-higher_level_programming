@@ -2,6 +2,8 @@
 """
 Func to divide matrix by div
 """
+
+
 def matrix_divided(matrix, div):
     """ Function that divides the integer/float numbers of a matrix
     Args:
