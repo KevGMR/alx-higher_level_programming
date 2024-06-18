@@ -8,6 +8,14 @@ def matrix_divided(matrix, div):
     """
     Function that divides all in matrix
     """
+
+    if not matrix:
+        raise TypeError("matrix must be a matrix "
+                        "(list of lists) of integers/floats")
+    if not isinstance(matrix, list):
+        raise TypeError("matrix must be a matrix "
+                        "(list of lists) of integers/floats")
+
     result = []
     matrix_len = len(matrix[0])
 
