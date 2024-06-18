@@ -7,6 +7,10 @@ Function to say my name
 def say_my_name(first_name, last_name=""):
     """
     Function for string concatenation
+    Returns:
+        No return
+    Raises:
+        TypeError: If first_name or last_name is not a string
     """
 
     if not isinstance(first_name, str) or not first_name:
