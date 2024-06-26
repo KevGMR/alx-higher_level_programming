@@ -58,7 +58,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """returns square instance"""
+        """initialize square instance"""
         return cls(size, size)
 
     def area(self):
