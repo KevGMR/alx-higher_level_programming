@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""IMPORTS RECT AND USE SUPER"""
+"""SQUARE DEF AND SUPER"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
+    """inits for square"""
     def __init__(self, size):
         self.integer_validator("size", size)
         super().__init__(size, size)
