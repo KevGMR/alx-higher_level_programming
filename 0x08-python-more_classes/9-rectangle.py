@@ -59,7 +59,7 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         """returns Rectangle instance (square)"""
-        return Rectangle(size, size)
+        return cls(size, size)
 
     def area(self):
         """returns area of the rectangle"""
