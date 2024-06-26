@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-function is_same_class
+This module contains the function is_same_class
 """
 
 
 def is_same_class(obj, a_class):
-    """returns true if obj is class instance"""
+    """return true if obj is the exact class a_class, otherwise false"""
     return (type(obj) == a_class)
