@@ -46,6 +46,21 @@ class Rectangle:
 
         self.__height = value
 
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """checks which rect area is bigger"""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        return rect_1 if rect_1.area() >= rect_2.area() else rect_2
+
+    @classmethod
+    def square(cls, size=0):
+        """initializes square"""
+        return cls(size, size)
+
     def area(self):
         """returns area of the rectangle"""
         return self.__width * self.__height
@@ -74,18 +89,3 @@ class Rectangle:
         """print message on instance deletion"""
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
-
-    @staticmethod
-    def bigger_or_equal(rect_1, rect_2):
-        """checks which rect area is bigger"""
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_2 must be an instance of Rectangle")
-
-        return rect_1 if rect_1.area() >= rect_2.area() else rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """returns square"""
-        return cls(size, size)
