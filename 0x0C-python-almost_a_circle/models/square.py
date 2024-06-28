@@ -27,9 +27,17 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
+        """
+        this updates using args and kwargs
+        args
+        order is id, size, x, y
+        """
         expected = (self.id, self.size, self.x, self.y)
 
         new_tuple = args + expected[len(args):len(expected)]
+
+        # print(expected)
+        # print(new_tuple)
         if args:
             self.id, self.size, self.x, self.y = new_tuple
         elif kwargs:
