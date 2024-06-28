@@ -26,6 +26,16 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        expected = (self.id, self.size, self.x, self.y)
+
+        new_tuple = args + expected[len(args):len(expected)]
+        if args:
+            self.id, self.size, self.x, self.y = new_tuple
+        elif kwargs:
+            for (key, value) in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
