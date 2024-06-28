@@ -7,7 +7,7 @@ import unittest
 from models.base import Base
 
 
-class test_base_init(unittest.TestCase):
+class TestBase(unittest.TestCase):
     """this tests the init of the Base Class"""
 
     def test_no_arg(self):
