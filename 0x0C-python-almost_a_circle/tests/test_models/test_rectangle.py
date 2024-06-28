@@ -11,7 +11,6 @@ class TestRectangle(unittest.TestCase):
     """unittests for the rectangle model"""
     def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
-    
 
     def test_no_args(self):
         with self.assertRaises(TypeError):

@@ -13,10 +13,23 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """initialization with id"""
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
+
+    def check_value(self, name, value):
+        """value checker"""
+
+        if not isinstance(value, int):
+            raise TypeError("{} must be an integer".format(name))
+
+        if len(name) > 2:
+            if value <= 0:
+                raise ValueError("{} must be > 0".format(name))
+        else:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
 
     @property
     def width(self):
@@ -40,16 +53,20 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        self.check_value("width", value)
         self.__width = value
 
     @height.setter
     def height(self, value):
+        self.check_value("height", value)
         self.__height = value
 
     @x.setter
     def x(self, value):
+        self.check_value("x", value)
         self.__x = value
 
     @y.setter
     def y(self, value):
+        self.check_value("y", value)
         self.__y = value
