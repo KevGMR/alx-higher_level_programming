@@ -86,7 +86,7 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates rectangle using args"""
         expected = (self.id, self.width, self.height, self.x, self.y)
 
@@ -96,3 +96,6 @@ class Rectangle(Base):
         if args:
             new_values = args + expected[len(args):len(expected)]
             self.id, self.width, self.height, self.x, self.y = new_values
+        elif kwargs:
+            for (name, value) in kwargs.items():
+                setattr(self, name, value)
