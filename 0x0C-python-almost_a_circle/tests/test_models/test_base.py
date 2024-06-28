@@ -23,6 +23,16 @@ class test_base_init(unittest.TestCase):
         b3 = Base()
         self.assertEqual(b1.id, b2.id - 1, b3.id - 2)
 
+    def test_none_id(self):
+        """tests with none"""
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, b2.id - 1)
+
+    def test_unique_id(self):
+        """test with id"""
+        self.assertEqual(12, Base(12).id)
+
 
 if __name__ == "__main__":
     unittest.main()
