@@ -85,3 +85,14 @@ class Rectangle(Base):
     def __str__(self):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
                                                        self.width, self.height)
+
+    def update(self, *args):
+        """updates rectangle using args"""
+        expected = (self.id, self.width, self.height, self.x, self.y)
+
+        # gets all args then appends whats
+        # left over from already existing values
+
+        if args:
+            new_values = args + expected[len(args):len(expected)]
+            self.id, self.width, self.height, self.x, self.y = new_values
