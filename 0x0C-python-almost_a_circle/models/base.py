@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
 Contains class Base
+assigns id to class even if id
+is not assigned
 """
 
 
