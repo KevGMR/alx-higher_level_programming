@@ -37,3 +37,10 @@ class Base:
                 text.append(lst.to_dictionary())
         with open(file_name, mode="w", encoding="utf-8") as f:
             return f.write(Base.to_json_string(text))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation """
+        if not json_string:
+            return []
+        return json_string
