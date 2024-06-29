@@ -43,4 +43,4 @@ class Base:
         """transform a JSON string representation `json_string` to a list"""
         if not json_string or len(json_string) == 0:
             return []
-        return json_string
+        return json.loads(json_string)
