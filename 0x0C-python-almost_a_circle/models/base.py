@@ -40,7 +40,8 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON string representation """
-        if not json_string:
+        """transform a JSON string representation `json_string` to a list"""
+        print(json_string)
+        if not json_string or len(json_string) == 0:
             return []
         return json_string
